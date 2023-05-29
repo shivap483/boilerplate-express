@@ -2,10 +2,10 @@ let express = require('express');
 let app = express();
 port = 3000
 app.listen(port, () => {
-    console.log(`Node is listening on port ${port}...`);
+  console.log(`Node is listening on port ${port}...`);
 })
 app.get("/", (req, res) => {
-res.send('Response String')
+  res.send("Hello Express")
 })
 console.log("Hello World")
 
@@ -44,4 +44,4 @@ console.log("Hello World")
 
 
 
- module.exports = app;
+module.exports = app;
