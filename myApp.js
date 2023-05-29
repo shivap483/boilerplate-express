@@ -5,9 +5,11 @@ app.listen(port, () => {
   console.log(`Node is listening on port ${port}...`);
 })
 app.get("/", (req, res) => {
-  res.send("Hello Express")
+    const message = 'Hello Express'
+    console.log(`${message}`)
+  res.send(message)
 })
-console.log("Hello World")
+
 
 
 
