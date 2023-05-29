@@ -1,9 +1,9 @@
 let express = require('express');
 let app = express();
-// port = 3000
-// app.listen(port, () => {
-//   console.log(`Node is listening on port ${port}...`);
-// })
+
+const absolutePath = __dirname + '/public'
+app.use('/public', express.static(absolutePath))
+
 app.get("/", (req, res) => {
     const absolutePath = __dirname + '/views/index.html'
   res.sendFile(absolutePath)
