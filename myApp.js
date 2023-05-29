@@ -5,9 +5,8 @@ let app = express();
 //   console.log(`Node is listening on port ${port}...`);
 // })
 app.get("/", (req, res) => {
-    const message = 'Hello Express'
-    console.log(`${message}`)
-  res.send(message)
+    const absolutePath = __dirname + '/views/index.html'
+  res.sendFile(absolutePath)
 })
 
 
