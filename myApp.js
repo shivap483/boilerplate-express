@@ -9,6 +9,11 @@ app.get("/", (req, res) => {
   res.sendFile(absolutePath)
 })
 
+app.get("/json", (req, res) => {
+    const obj = {message: "Hello json"};
+    res.json(obj)
+})
+
 
 
 
