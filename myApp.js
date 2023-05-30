@@ -41,6 +41,14 @@ app.get('/:word/echo', (req, res) => {
     res.json(responseObj)
 })
 
+app.get('/name', (req, res) => {
+    const firstName = req.query.first
+    const lastName = req.query.last
+    const responseObj = {
+        name: `${firstName} ${lastName}`
+    }
+    res.json(responseObj)
+})
 
 
 
