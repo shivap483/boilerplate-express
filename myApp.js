@@ -24,6 +24,16 @@ app.get("/json", (req, res) => {
     res.json(obj)
 })
 
+app.get('/now', (req, res, next) => {
+    req.time = new Date().toString();
+    next();
+}, (req, res) => {
+    const responseObj = {
+        time: req.time
+    }
+    res.json(responseObj)
+})
+
 
 
 
