@@ -51,9 +51,8 @@ app.route('/name').get((req, res) => {
     }
     res.json(responseObj)
 }).post((req, res) => {
-    const body = req.body
-    const firstName = req.query.first
-    const lastName = req.query.last
+    const firstName = req.body.first
+    const lastName = req.body.last
     const responseObj = {
         name: `${firstName} ${lastName}`
     }
