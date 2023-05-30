@@ -34,6 +34,13 @@ app.get('/now', (req, res, next) => {
     res.json(responseObj)
 })
 
+app.get('/:word/echo', (req, res) => {
+    const responseObj = {
+        echo: req.params.word
+    }
+    res.json(responseObj)
+})
+
 
 
 
